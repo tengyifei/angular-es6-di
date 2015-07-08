@@ -69,6 +69,7 @@ If you have multiple implementations of `Logger`, you'll be able to pick one for
 import ConsoleLogger from 'ConsoleLogger';
 import FileLogger from 'FileLogger';
 
+let app = angular.module('app', []);
 // Pick one :D
 // app.use([FileLogger]);
 app.use([ConsoleLogger]);

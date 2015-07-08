@@ -51,9 +51,9 @@ export default class ConsoleLogger extends Logger {
   }
 }
 ```
-Note the `extends` statement. All services along the prototype chain will be overriden by this service if it was specified in the `module.use([...])` call, and the override happens in the same order as the order of services in the parameter array to `use`. If multiple `use` calls are present, succeeding calls will override previous ones if possible.
+Note the `extends` statement. All services along the prototype chain will be overriden by this service if it was specified in the `module.use(...)` call, and the override happens in the same order as the order of services in the parameters to `use`. If multiple `use` calls are present, succeeding calls will override previous ones if possible.
 
-Your other controllers or services can specify a dependency on `Logger`. At runtime an implementation will be chosen based on the `.use([...])` statements in your module.
+Your other controllers or services can specify a dependency on `Logger`. At runtime an implementation will be chosen based on the `.use(...)` statements in your module.
 ```js
 import Logger from 'Logger';
 
@@ -71,6 +71,6 @@ import FileLogger from 'FileLogger';
 
 let app = angular.module('app', []);
 // Pick one :D
-// app.use([FileLogger]);
-app.use([ConsoleLogger]);
+// app.use(FileLogger);
+app.use(ConsoleLogger);
 ```

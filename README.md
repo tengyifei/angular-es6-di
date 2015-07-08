@@ -1,4 +1,4 @@
-# angular-es6-di [![JSPM](https://img.shields.io/badge/JSPM-angular--es6--di-db772b.svg?style=flat-square)](http://jspm.io)
+# angular-es6-di [![JSPM](https://img.shields.io/badge/JSPM-angular--es6--di-db772b.svg?style=flat-square)](http://kasperlewau.github.io/registry/#/?q=angular-es6-di)
 Better dependency injection for Angular 1.x
 
 ## Installation

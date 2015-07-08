@@ -28,6 +28,10 @@ app.use(MyController);
 ```
 As you can see the dependencies for `MyController` are stated in an array passed to the `@Controller(...)` annotation. If your controller has no dependency, you may write `@Controller` as a short form for `@Controller([])`.
 
+### Controller/Service name
+`angular-es6-di` lets you do away with magic strings. If you do need to access the raw controller/service name used in registering the class with Angular, use `MyController.$name`.
+
+### Services
 Sometimes your Angular services follow an interface. Now you'll be able to integrate them into Angular with ease. Suppose you have a logging protocol, it can be written in `angular-es6-di` as:
 ```js
 import { Service } from 'angular-es6-di';

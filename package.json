@@ -1,14 +1,14 @@
 {
   "jspm": {
+    "registry": "jspm",
+    "main": "index.js",
+    "format": "es6",
     "directories": {
       "lib": "lib"
     },
-    "format": "es6",
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.2"
     },
-    "main": "index.js",
-    "registry": "jspm",
     "devDependencies": {
       "babel": "npm:babel-core@^5.6.4",
       "babel-runtime": "npm:babel-runtime@^5.6.4",

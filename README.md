@@ -34,7 +34,7 @@ As you can see the dependencies for `MyController` are stated in an array passed
 #### Compatibility with string-style injections
 `angular-es6-di` interoperates well with string-based injections. That means you can refer to your existing services by string and even use mixed string/class dependencies. The same applies to services.
 ```js
-@Controller([ClassDependency, 'string.dependency')
+@Controller([ClassDependency, 'string.dependency'])
 ```
 
 ### Services

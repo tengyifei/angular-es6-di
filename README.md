@@ -78,3 +78,28 @@ let app = angular.module('app', []);
 // app.use(FileLogger);
 app.use(ConsoleLogger);
 ```
+
+### Values
+Value injection is again achieved through ES6 classes. Each value we want to inject corresponds to a different class. By annotating the class you'll be able to use it in services.
+```js
+@Value export class UploadURL { }
+
+@Service([UploadURL])
+export class MyUploader {
+  constructor(url) { ... }
+}
+```
+The Angular `module.value` method is patched to recognize annotated classes in addition to magic strings.
+```js
+import { UploadURL, MyUploader } from 'Uploader';
+
+let app = angular.module('app', []);
+app.use(MyUploader);
+app.value(UploadURL, 'www.example.com');
+```
+#### Default values
+'angular-es6-di` supports default value injection. The syntax is as follows:
+```js
+@Value @Default('something') export class MyValue { }
+```
+If you do not specify a value for `MyValue` using `module.value`, `MyValue` will automatically take on the value of `'something'` whenever it is required as a dependency in your services/controllers.

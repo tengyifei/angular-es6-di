@@ -98,7 +98,7 @@ app.use(MyUploader);
 app.value(UploadURL, 'www.example.com');
 ```
 #### Default values
-'angular-es6-di` supports default value injection. The syntax is as follows:
+`angular-es6-di` supports default value injection. The syntax is as follows:
 ```js
 @Value @Default('something') export class MyValue { }
 ```

@@ -37,6 +37,9 @@ As you can see the dependencies for `MyController` are stated in an array passed
 @Controller([ClassDependency, 'string.dependency'])
 ```
 
+#### Automatic namespacing
+The library automatically prefixes your class names with a random string during service/controller registration, thereby eliminating the issue of class name collision.
+
 ### Services
 Sometimes your Angular services follow an interface. Now you'll be able to integrate them into Angular with ease. Suppose you have a logging protocol, it can be written in `angular-es6-di` as:
 ```js

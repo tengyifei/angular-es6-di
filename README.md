@@ -112,3 +112,37 @@ app.value(UploadURL, 'www.example.com');
 @Value @Default('something') export class MyValue { }
 ```
 If you do not specify a value for `MyValue` using `module.value`, `MyValue` will automatically take on the value of `'something'` whenever it is required as a dependency in your services/controllers.
+
+### Name overriding
+If you absolutely need to hardcode the name of a class as it is exposed to Angular, you can override the name using the `@Name` annotation:
+```js
+@Controller
+@Name('mycontroller')
+class NameIsUselessHere {
+}
+```
+Then you can refer to the controller by the name `mycontroller`.
+
+### Directives
+You can also declare directives.
+```js
+import { Directive } from 'angular-es6-di';
+
+@Directive
+class MyDirective {
+  constructor() {
+    this.template = '...';
+  }
+}
+```
+Directives enjoy the same support and syntax of dependency injection. Since directives are almost always referred to directly in html, the name of the directive is simply the snake-case version of its class name: `my-directive`, and you would use it like this: `<div my-directive>...</div>`.
+
+Directives can also have their names overridden. Just use `@Name`.
+```js
+@Directive
+@Name('newDirective')
+class MyDirective { ... }
+```
+```html
+<div new-directive>...</div>
+```

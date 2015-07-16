@@ -146,3 +146,6 @@ class MyDirective { ... }
 ```html
 <div new-directive>...</div>
 ```
+
+## License
+MIT

@@ -1,4 +1,30 @@
 {
+  "name": "angular-es6-di",
+  "description": "Better dependency injection for Angular 1.x, supports services, controllers, directives, and values.",
+  "version": "1.0.5",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tengyifei/angular-es6-di.git"
+  },
+  "keywords": [
+    "angular",
+    "es6",
+    "dependency",
+    "injection"
+  ],
+  "author": "Yifei Teng <tengyifei88@gmail.com> (https://thinkingandcomputing.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tengyifei/angular-es6-di/issues"
+  },
+  "homepage": "https://github.com/tengyifei/angular-es6-di#readme",
   "jspm": {
     "registry": "jspm",
     "main": "index.js",
